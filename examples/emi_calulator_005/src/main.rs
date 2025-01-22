@@ -9,21 +9,21 @@ fn main() {
     let mut input = String::new();
     let currency_symbol = '¥'; // $, £, ¥, ₹
 
-    println!(TODOs);
+    println!("Enter the loan amount (prinicipal):");
     io::stdin()
         .read_line(&mut input)
         .expect("Failed to read line");
     let principal: f64 = input.trim().parse().expect("Input number only!");
     input.clear();
 
-    println!(TODOs);
+    println!("Enter the annual interest rate (as a percentage, e.g., 7 for 7%):");
     io::stdin()
         .read_line(&mut input)
         .expect("Failed to read line");
     let annual_rate: f64 = input.trim().parse().expect("Input number only!");
     input.clear();
 
-    println!(TODOs);
+    println!("Enter the number of months for repayment:");
     io::stdin()
         .read_line(&mut input)
         .expect("Failed to read line");
@@ -31,7 +31,7 @@ fn main() {
     input.clear();
 
     let emi = calculate_emi(principal, annual_rate, months);
-    println!(TODOs);
+    println!("The monthly EMI is: {currency_symbol}{emi:.2}");
 }
 
 /*
